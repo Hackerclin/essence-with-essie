@@ -1,0 +1,246 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2b2b2b; /* Dark Background */
+    color: #ccc; /* Light grey text for contrast */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Dark Mode Styles (Dark Mode now matches the body) */
+body.dark-mode {
+    background-color: #2b2b2b; /* Dark Mode Background */
+    color: #ccc; /* Light grey text */
+}
+
+body.dark-mode header {
+    background-color: #333; /* Dark header */
+}
+
+/* Header */
+header {
+    background-color: #2b2b2b; /* Dark background */
+    padding: 30px;
+    text-align: center;
+    color: #d81b60; /* Main Pink Color */
+    border-bottom: 3px solid #555; /* Dark grey border */
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 2.8em;
+    color: #d81b60; /* Main Pink Color */
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #aaa; /* Fading grey */
+    margin-top: 10px;
+}
+
+/* Navigation */
+.navbar {
+    list-style: none;
+    text-align: right;
+    background-color: #2b2b2b; /* Dark Background for navbar */
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 10px;
+}
+
+.navbar li {
+    display: inline;
+    margin-left: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ccc; /* Light grey text for navbar */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #d81b60; /* Main Pink Color */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #2b2b2b; /* Dark Background */
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.hero h2 {
+    color: #d81b60; /* Main Pink Color */
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.cta-btn {
+    background-color: #d81b60; /* Main Pink Color */
+    color: #2b2b2b; /* Black Text */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #c2185b; /* Slightly darker pink */
+}
+
+/* Footer */
+footer {
+    background-color: #2b2b2b; /* Black Background */
+    color: #ccc; /* Light grey text */
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    border-radius: 10px;
+}
+
+footer a {
+    color: #d81b60; /* Main Pink Color for links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 40px;
+    background-color: #333; /* Dark grey background */
+    text-align: center;
+    border-radius: 15px;
+}
+
+/* Contact Form Input Styles */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #555; /* Dark grey borders */
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #2b2b2b; /* Dark background for inputs */
+    color: #ccc; /* Light text */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #d81b60; /* Main Pink Color */
+    outline: none;
+}
+
+/* Send Message Button */
+.send-message-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d81b60; /* Main Pink Color */
+    color: #2b2b2b; /* Black Text */
+    padding: 15px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+.send-message-btn:hover {
+    background-color: #c2185b; /* Slightly darker pink */
+    transform: translateY(-3px);
+}
+
+/* Section for Uniformity */
+section {
+    padding: 40px;
+    margin-bottom: 20px;
+    background-color: #333; /* Dark grey background */
+    border-radius: 15px;
+}
+
+section h2 {
+    font-size: 2em;
+    color: #ccc; /* Light grey for section titles */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 1.1em;
+    color: #aaa; /* Fading grey for section text */
+    text-align: center;
+}
+
+/* Add Shadow Effect on Containers for Depth */
+.container {
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Dark shadow */
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* Hover Effects and Animations */
+.shadow-hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    transition: box-shadow 0.3s;
+}
+
+.zoom-effect {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+.hover-color-cycle {
+    animation: colorCycle 3s infinite;
+}
+
+@keyframes colorCycle {
+    0% { color: #d81b60; }
+    50% { color: #f50057; }
+    100% { color: #c2185b; }
+}
+
+/* Scroll Progress Indicator */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    height: 4px;
+    background: #3498db;
+    transition: width 0.2s;
+}
+
+/* Reveal on Scroll */
+.reveal {
+    opacity: 0;
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.reveal.visible {
+    opacity: 1;
+}
